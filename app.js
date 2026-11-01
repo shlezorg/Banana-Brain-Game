@@ -182,8 +182,7 @@ elements.restartButton.addEventListener("click", restartGame);
 // Start the first round when the page loads.
 updateStats();
 loadPuzzle();
-<<<<<<< Updated upstream
-=======
+
 
 function showResults() {
 
@@ -230,5 +229,4 @@ function showResults() {
 
       }
   }
-}
->>>>>>> Stashed changes
+};

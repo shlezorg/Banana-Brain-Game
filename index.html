@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Banana Brain Challenge - a number puzzle game">
+  <title>Banana Brain Challenge</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <main class="game-shell">
+    <header class="topbar">
+      <a class="brand" href="#" aria-label="Banana Brain Challenge home">
+        <span class="brand-mark" aria-hidden="true">🍌</span>
+        <span>banana<span class="brand-light">brain</span></span>
+      </a>
+      <div class="topbar-right">
+        <span class="level-pill">BRAIN TRAINING</span>
+        <span class="player-avatar" aria-label="Guest player">G</span>
+      </div>
+    </header>
+
+    <section class="game-layout" aria-labelledby="game-title">
+      <div class="intro">
+        <p class="eyebrow">THE DAILY BRAIN BREAK</p>
+        <h1 id="game-title">Banana Brain <span>Challenge.</span></h1>
+        <p class="intro-copy">Look closely, think logically, and solve the puzzle. Your next “aha!” moment is one answer away.</p>
+      </div>
+
+      <section class="game-card" aria-label="Puzzle game">
+        <div class="game-card-header">
+          <div>
+            <p class="card-kicker">YOUR PUZZLE</p>
+            <h2 id="puzzle-heading">Ready when you are</h2>
+          </div>
+          <div class="round-counter"><span id="round-number">01</span><small>/ 05</small></div>
+        </div>
+
+        <div class="progress-track" aria-label="Game progress">
+          <div class="progress-fill" id="progress-fill"></div>
+        </div>
+
+        <div class="puzzle-stage" id="puzzle-stage">
+          <div class="loading-state" id="loading-state">
+            <span class="loading-banana" aria-hidden="true">🍌</span>
+            <p>Getting your puzzle ready…</p>
+          </div>
+          <img id="puzzle-image" class="puzzle-image" alt="Number puzzle" hidden>
+          <div class="image-fallback" id="image-fallback" hidden>
+            <span aria-hidden="true">🧩</span>
+            <p>The puzzle image could not be displayed.</p>
+          </div>
+        </div>
+
+        <form id="answer-form" class="answer-form">
+          <label for="answer-input">What's your answer?</label>
+          <div class="answer-row">
+            <input id="answer-input" name="answer" type="number" inputmode="numeric"
+                   placeholder="Enter a number" autocomplete="off" required>
+            <button id="submit-button" class="primary-button" type="submit">Submit answer <span aria-hidden="true">↗</span></button>
+          </div>
+        </form>
+
+        <div id="feedback" class="feedback" role="status" aria-live="polite"></div>
+
+        <div class="game-footer">
+          <div class="score-block">
+            <span class="footer-label">YOUR SCORE</span>
+            <strong id="score-value">0 <small>pts</small></strong>
+          </div>
+          <div class="footer-divider"></div>
+          <div class="score-block">
+            <span class="footer-label">CORRECT ANSWERS</span>
+            <strong id="correct-value">0 <small>/ 5</small></strong>
+          </div>
+          <button id="next-button" class="next-button" type="button" hidden>Next puzzle <span aria-hidden="true">→</span></button>
+        </div>
+      </section>
+
+      <p class="bottom-note"><span aria-hidden="true">✦</span> Take your time. Great minds notice the little things.</p>
+    </section>
+
+    <section id="results-panel" class="results-panel" hidden aria-live="polite">
+      <div class="results-icon">🏆</div>
+      <p class="eyebrow">CHALLENGE COMPLETE</p>
+      <h2>Look at that brain work.</h2>
+      <p class="results-copy">You completed all five puzzles. Here's how you did.</p>
+      <div class="result-stats">
+        <div><span>FINAL SCORE</span><strong id="final-score">0</strong><small>points</small></div>
+        <div><span>CORRECT</span><strong id="final-correct">0/5</strong><small>answers</small></div>
+      </div>
+      <button id="restart-button" class="primary-button restart-button" type="button">Play again <span aria-hidden="true">↻</span></button>
+    </section>
+
+    <footer class="page-footer">BANANA BRAIN CHALLENGE <span>•</span> GAMEPLAY PROTOTYPE v1.0</footer>
+  </main>
+</body>
+</html>

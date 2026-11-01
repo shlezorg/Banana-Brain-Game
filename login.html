@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login | Banana Brain Challenge</title>
+    <link rel="stylesheet" href="auth.css">
+    <script src="auth.js" defer></script>
+</head>
+<body>
+    <main class="auth-shell">
+
+        <a class="brand" href="login.html">
+            <span class="brand-mark">🍌</span>
+            <span>banana<span class="brand-light">brain</span></span>
+        </a>
+
+        <section class="auth-card">
+
+            <div class="auth-heading">
+                <p class="eyebrow">WELCOME BACK</p>
+                <h1>Good to see you<span>.</span></h1>
+                <p>Sign in and give your brain a little workout.</p>
+            </div>
+
+            <form id="login-form">
+
+                <label for="login-email">Email address</label>
+                <input
+                    id="login-email"
+                    type="email"
+                    placeholder="you@example.com"
+                    autocomplete="email"
+                    required
+                >
+
+                <label for="login-password">Password</label>
+                <input
+                    id="login-password"
+                    type="password"
+                    placeholder="Enter your password"
+                    autocomplete="current-password"
+                    required
+                >
+
+                <p id="login-message" class="form-message"></p>
+
+                <button class="primary-button full-button" type="submit">
+                    Sign in <span>↗</span>
+                </button>
+
+            </form>
+
+            <p class="auth-switch">
+                New to the challenge?
+                <a href="register.html">Create an account</a>
+            </p>
+
+            <p class="demo-note">
+                Prototype: accounts are stored in this browser only.
+            </p>
+
+        </section>
+
+        <footer class="page-footer">
+            BANANA BRAIN CHALLENGE • AUTHENTICATION PROTOTYPE
+        </footer>
+
+    </main>
+</body>
+</html>

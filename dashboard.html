@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard | Banana Brain Challenge</title>
+    <link rel="stylesheet" href="auth.css">
+    <script src="auth.js" defer></script>
+</head>
+<body>
+    <main class="dashboard-shell">
+
+        <header class="dashboard-topbar">
+
+            <a class="brand" href="dashboard.html">
+                <span class="brand-mark">🍌</span>
+                <span>banana<span class="brand-light">brain</span></span>
+            </a>
+
+            <div class="dashboard-user">
+                <span class="user-avatar" id="user-avatar">P</span>
+                <span class="user-name" id="header-name">Player</span>
+                <button id="logout-button" class="text-button" type="button">
+                    Log out
+                </button>
+            </div>
+
+        </header>
+
+        <section class="dashboard-content">
+
+            <div class="welcome-row">
+                <div>
+                    <p class="eyebrow">YOUR PLAYER SPACE</p>
+                    <h1>Hey, <span id="welcome-name">Player</span>.</h1>
+                    <p class="muted-copy">
+                        Ready to give your brain a challenge today?
+                    </p>
+                </div>
+
+                <div class="welcome-banana">🍌</div>
+            </div>
+
+            <section class="dashboard-stats">
+
+                <article class="stat-card">
+                    <span class="stat-icon">⭐</span>
+                    <p>BEST SCORE</p>
+                    <strong id="best-score">0</strong>
+                    <small>points</small>
+                </article>
+
+                <article class="stat-card">
+                    <span class="stat-icon">🎮</span>
+                    <p>GAMES PLAYED</p>
+                    <strong id="games-played">0</strong>
+                    <small>completed games</small>
+                </article>
+
+                <article class="stat-card">
+                    <span class="stat-icon">🧠</span>
+                    <p>TOTAL CORRECT</p>
+                    <strong id="total-correct">0</strong>
+                    <small>puzzles solved</small>
+                </article>
+
+            </section>
+
+            <section class="dashboard-main-grid">
+
+                <article class="challenge-card">
+
+                    <div class="challenge-copy">
+                        <p class="eyebrow">READY FOR A NEW ROUND?</p>
+
+                        <h2>
+                            Small puzzles.<br>
+                            Big brain energy.
+                        </h2>
+
+                        <p>
+                            Five picture puzzles. Ten points for every
+                            correct answer. How high can you score?
+                        </p>
+
+                        <a class="primary-button start-button" href="index.html">
+                            Start a challenge <span>↗</span>
+                        </a>
+                    </div>
+
+                    <div class="challenge-art">🧩</div>
+
+                </article>
+
+                <article class="profile-card">
+
+                    <p class="eyebrow">PLAYER PROFILE</p>
+
+                    <div class="profile-avatar" id="profile-avatar">P</div>
+
+                    <h2 id="profile-name">Player</h2>
+
+                    <p id="profile-email" class="muted-copy">
+                        player@example.com
+                    </p>
+
+                    <div class="profile-divider"></div>
+
+                    <div class="profile-line">
+                        <span>Account type</span>
+                        <strong>Player</strong>
+                    </div>
+
+                    <div class="profile-line">
+                        <span>Member since</span>
+                        <strong id="member-since">—</strong>
+                    </div>
+
+                </article>
+
+            </section>
+
+            <p class="dashboard-note">
+                Your statistics are stored in this browser for this prototype.
+                They are not synced to an online database.
+            </p>
+
+        </section>
+
+        <footer class="page-footer">
+            BANANA BRAIN CHALLENGE • PLAYER DASHBOARD
+        </footer>
+
+    </main>
+</body>
+</html>

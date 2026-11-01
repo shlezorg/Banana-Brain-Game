@@ -182,3 +182,53 @@ elements.restartButton.addEventListener("click", restartGame);
 // Start the first round when the page loads.
 updateStats();
 loadPuzzle();
+<<<<<<< Updated upstream
+=======
+
+function showResults() {
+
+  elements.gameLayout.hidden = true;
+  elements.resultsPanel.hidden = false;
+
+  elements.finalScore.textContent = score;
+  elements.finalCorrect.textContent =
+      `${correctAnswers}/${TOTAL_ROUNDS}`;
+
+  elements.progressFill.style.width = "100%";
+
+  // Save game results to the current player's account
+  const currentEmail =
+      localStorage.getItem("bananaBrainCurrentUser");
+
+  if (currentEmail) {
+
+      const users = JSON.parse(
+          localStorage.getItem("bananaBrainUsers") || "[]"
+      );
+
+      const player = users.find(
+          user => user.email === currentEmail
+      );
+
+      if (player) {
+
+          player.gamesPlayed =
+              (player.gamesPlayed || 0) + 1;
+
+          player.totalCorrect =
+              (player.totalCorrect || 0) + correctAnswers;
+
+          player.bestScore = Math.max(
+              player.bestScore || 0,
+              score
+          );
+
+          localStorage.setItem(
+              "bananaBrainUsers",
+              JSON.stringify(users)
+          );
+
+      }
+  }
+}
+>>>>>>> Stashed changes
